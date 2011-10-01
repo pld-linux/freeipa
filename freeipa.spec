@@ -6,15 +6,12 @@
 #        krb5-devel is needed by freeipa-2.1.0-0.1.src
 #        krb5-workstation is needed by freeipa-2.1.0-0.1.src
 #        libipa_hbac-python is needed by freeipa-2.1.0-0.1.src
-#        policycoreutils >= %{POLICYCOREUTILSVER} is needed by freeipa-2.1.0-0.1.src
-#        pylint is needed by freeipa-2.1.0-0.1.src
 #        python-kerberos is needed by freeipa-2.1.0-0.1.src
 #        python-krbV is needed by freeipa-2.1.0-0.1.src
-#        python-ldap is needed by freeipa-2.1.0-0.1.src
-#        python-netaddr >= 0.7.5-3 is needed by freeipa-2.1.0-0.1.src
 #        python-nss is needed by freeipa-2.1.0-0.1.src
 #        python-rhsm is needed by freeipa-2.1.0-0.1.src
 
+%define		POLICYCOREUTILSVER	1.33.12-1
 Summary:	The Identity, Policy and Audit system
 Name:		freeipa
 Version:	2.1.0
@@ -59,7 +56,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		httpd_conf			/etc/httpd/conf.d
 %define		plugin_dir			%{_libdir}/dirsrv/plugins
-%define		POLICYCOREUTILSVER	1.33.12-1
 %define		gettext_domain		ipa
 
 %description
